@@ -17,7 +17,7 @@
 <p align="center">
   <a href="">文档</a> •
   <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 討論群组</a> •
-  <a href="https://t.me/gominerproxy">Telegram 通知頻道</a>
+  <a href="https://t.me/go_minerproxy">Telegram 通知頻道</a>
 </p>
 
 ## :sparkles: 特性
