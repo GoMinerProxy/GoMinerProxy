@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/logo.png" width="350"/>
 </h1>
 
-<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具 .</h4>
+<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具 (當前正在最後測試，將於最近一天內發出，感興趣可以先加入TG獲取最新開發進度).</h4>
 
 <p align="center">
   <a>
@@ -16,8 +16,8 @@
 
 <p align="center">
   <a href="">文档</a> •
-  <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 群组</a> •
-  <a href="">Telegram 通知欄</a>
+  <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 討論群组</a> •
+  <a href="https://t.me/gominerproxy">Telegram 通知頻道</a>
 </p>
 
 ## :sparkles: 特性
