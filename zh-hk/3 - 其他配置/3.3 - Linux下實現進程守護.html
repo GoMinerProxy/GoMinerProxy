@@ -1,0 +1,587 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.3 - Linux下實現進程守護 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.4 - Linux進程守護一鍵腳本.html" />
+    
+    
+    <link rel="prev" href="3.2 - 免費獲取SSL證書.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    歡迎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1 - 快速開始
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1 - 快速開始/1.1 - Windows系統.html">
+            
+                <a href="../1 - 快速開始/1.1 - Windows系統.html">
+            
+                    
+                    1.1 - Windows系統
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1 - 快速開始/1.2 - Linux系統.html">
+            
+                <a href="../1 - 快速開始/1.2 - Linux系統.html">
+            
+                    
+                    1.2 - Linux系統
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1 - 快速開始/1.3 - Mac系統.html">
+            
+                <a href="../1 - 快速開始/1.3 - Mac系統.html">
+            
+                    
+                    1.3 - Mac系統
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2 - 網頁后臺的功能與介紹
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2 - 網頁后臺的功能與介紹/2.1 - 首頁.html">
+            
+                <a href="../2 - 網頁后臺的功能與介紹/2.1 - 首頁.html">
+            
+                    
+                    2.1 - 首頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2 - 網頁后臺的功能與介紹/2.2 - 賬戶列表.html">
+            
+                <a href="../2 - 網頁后臺的功能與介紹/2.2 - 賬戶列表.html">
+            
+                    
+                    2.2 - 賬戶列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2 - 網頁后臺的功能與介紹/2.3 - 礦池設置.html">
+            
+                <a href="../2 - 網頁后臺的功能與介紹/2.3 - 礦池設置.html">
+            
+                    
+                    2.3 - 礦池設置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2 - 網頁后臺的功能與介紹/2.4 - 網頁配置.html">
+            
+                <a href="../2 - 網頁后臺的功能與介紹/2.4 - 網頁配置.html">
+            
+                    
+                    2.4 - 網頁配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2 - 網頁后臺的功能與介紹/2.5 - 運行日志.html">
+            
+                <a href="../2 - 網頁后臺的功能與介紹/2.5 - 運行日志.html">
+            
+                    
+                    2.5 - 運行日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3 - 其他配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1 - 開啟SSL.html">
+            
+                <a href="3.1 - 開啟SSL.html">
+            
+                    
+                    3.1 - 開啟SSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.2 - 免費獲取SSL證書.html">
+            
+                <a href="3.2 - 免費獲取SSL證書.html">
+            
+                    
+                    3.2 - 免費獲取SSL證書
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="3.3 - Linux下實現進程守護.html">
+            
+                <a href="3.3 - Linux下實現進程守護.html">
+            
+                    
+                    3.3 - Linux下實現進程守護
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3.4 - Linux進程守護一鍵腳本.html">
+            
+                <a href="3.4 - Linux進程守護一鍵腳本.html">
+            
+                    
+                    3.4 - Linux進程守護一鍵腳本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4 - 維護
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4 - 維護/4.1 - 更新升級.html">
+            
+                <a href="../4 - 維護/4.1 - 更新升級.html">
+            
+                    
+                    4.1 - 更新升級
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5 - 二次開發
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    5.1 API(暫未開放)
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.3 - Linux下實現進程守護</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="33---linux&#x4E0B;&#x5BE6;&#x73FE;&#x9032;&#x7A0B;&#x5B88;&#x8B77;">3.3 - Linux&#x4E0B;&#x5BE6;&#x73FE;&#x9032;&#x7A0B;&#x5B88;&#x8B77;</h1>
+<p><em>Linux&#x4E0B;&#x5BE6;&#x73FE;&#x9032;&#x7A0B;&#x5B88;&#x8B77;&#x7684;&#x8A73;&#x7D30;&#x5BE6;&#x73FE;&#x6B65;&#x9A5F; (&#x65B0;&#x624B;&#x5EFA;&#x8B70;&#x9078;&#x64C7;&#x4E0B;&#x4E00;&#x7AE0;&#x7684;&#x4E00;&#x9375;&#x8173;&#x672C;)</em> </p>
+<hr>
+<p>&#x4EE5;&#x4E0B;&#x5169;&#x7A2E;&#x65B9;&#x5F0F;&#x53EF;&#x4EFB;&#x9078;&#x5176;&#x4E00;&#xFF1A;</p>
+<h4 id="&#x4E00;&#x3001;systemd">&#x4E00;&#x3001;Systemd</h4>
+<pre><code class="lang-shell"># &#x7DE8;&#x8F2F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+vi /usr/lib/systemd/system/gominerproxy.service
+</code></pre>
+<p>&#x5C07;&#x6587;&#x4EF6;&#x4E2D;<code>PATH_TO_GOMINERPROXY</code> &#x66F4;&#x63DB;&#x70BA;&#x7A0B;&#x5E8F;&#x6240;&#x5728;&#x76EE;&#x9304;&#xFF1A;</p>
+<pre><code>[Unit]
+Description=gominerproxy
+Documentation=https://github.com/GoMinerProxy/GoMinerProxy/
+After=network.target
+
+[Service]
+WorkingDirectory=/PATH_TO_GOMINERPROXY
+ExecStart=/PATH_TO_GOMINERPROXY/gominerproxy
+Restart=on-abnormal
+RestartSec=5s
+KillMode=mixed
+
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x6307;&#x4EE4;&#x64CD;&#x63A7;&#x670D;&#x52D9;</p>
+<pre><code># &#x66F4;&#x65B0;&#x914D;&#x7F6E;
+systemctl daemon-reload
+
+# &#x555F;&#x52D5;&#x670D;&#x52D9;
+systemctl start gominerproxy
+
+# &#x8A2D;&#x7F6E;&#x958B;&#x6A5F;&#x555F;&#x52D5;
+systemctl enable gominerproxy
+</code></pre><hr>
+<h4 id="&#x4E8C;&#x3001;supervisor">&#x4E8C;&#x3001;Supervisor</h4>
+<p>&#x9996;&#x5148;&#x5B89;&#x88DD;<code>supervisor</code>&#xFF0C;&#x5DF2;&#x5B89;&#x88DD;&#x7684;&#x53EF;&#x4EE5;&#x8DF3;&#x904E;&#x3002;</p>
+<pre><code># &#x5B89;&#x88DD; supervisor
+yum install python-setuptools -y    //Centos&#x4F7F;&#x7528;
+apt install python-setuptools -y    //Ubuntu&#x3001;Debian&#x4F7F;&#x7528;
+easy_install supervisor
+
+# &#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+touch /etc/supervisord.conf
+echo_supervisord_conf &gt; /etc/supervisord.conf
+</code></pre><p>&#x7DE8;&#x8F2F;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>vi /etc/supervisord.conf
+</code></pre><p>&#x5C07;&#x6587;&#x4EF6;&#x5E95;&#x90E8;&#x7684;<code>[include]</code> &#x5206;&#x5340;&#x6CE8;&#x91CB;&#x7B26;&#x865F;<code>;</code>&#x522A;&#x9664;&#xFF0C;&#x52A0;&#x5165;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x8DEF;&#x5F91;&#xFF1A;</p>
+<pre><code>[include]
+files = /etc/supervisor/conf/*.conf
+</code></pre><p>&#x5275;&#x5EFA; GoMinerProxy &#x61C9;&#x7528;&#x914D;&#x7F6E;&#x6240;&#x5728;&#x6587;&#x4EF6;&#x76EE;&#x9304;&#xFF0C;&#x5E76;&#x5275;&#x5EFA;&#x6253;&#x958B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>mkdir -p /etc/supervisor/conf
+vi /etc/supervisor/conf/gominerproxy.conf
+</code></pre><p>&#x6839;&#x64DA;&#x5BE6;&#x969B;&#x60C5;&#x6CC1;&#x586B;&#x5BEB;&#x4EE5;&#x4E0B;&#x5167;&#x5BB9;&#x5E76;&#x4FDD;&#x5B58;&#xFF1A;</p>
+<pre><code>[program:gominerproxy]
+directory=/home/gominerproxy
+command=/home/gominerproxy/gominerproxy
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/gominerproxy.err
+stdout_logfile=/var/log/gominerproxy.log
+environment=CODENATION_ENV=prod
+</code></pre><p>&#x5176;&#x4E2D;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9805;&#x9700;&#x8981;&#x6839;&#x64DA;&#x5BE6;&#x969B;&#x60C5;&#x6CC1;&#x66F4;&#x6539;&#xFF1A;</p>
+<ul>
+<li><code>directory</code>: GoMinerProxy&#x4E3B;&#x7A0B;&#x5E8F;&#x6240;&#x5728;&#x76EE;&#x9304;</li>
+<li><code>command</code>: GoMinerProxy&#x4E3B;&#x7A0B;&#x5E8F;&#x7D55;&#x5C0D;&#x8DEF;&#x5F91;</li>
+<li><code>stderr_logfile</code>: &#x932F;&#x8AA4;&#x65E5;&#x5FD7;&#x8DEF;&#x5F91;</li>
+<li><code>stdout_logfile</code>: &#x901A;&#x5E38;&#x65E5;&#x5FD7;&#x8DEF;&#x5F91;</li>
+</ul>
+<p>&#x901A;&#x904E;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x555F;&#x52D5;supervisor&#xFF1A;</p>
+<pre><code>supervisord -c /etc/supervisord.conf
+</code></pre><p>&#x65E5;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x904E;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#x7BA1;&#x7406; GoMinerProxy&#x9032;&#x7A0B;&#xFF1A;</p>
+<pre><code># &#x555F;&#x52D5;
+sudo supervisorctl start gominerproxy
+
+# &#x505C;&#x6B62;
+sudo supervisorctl stop gominerproxy
+
+# &#x67E5;&#x770B;&#x72C0;&#x614B;
+sudo supervisorctl status gominerproxy
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.2 - 免費獲取SSL證書.html" class="navigation navigation-prev " aria-label="Previous page: 3.2 - 免費獲取SSL證書">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.4 - Linux進程守護一鍵腳本.html" class="navigation navigation-next " aria-label="Next page: 3.4 - Linux進程守護一鍵腳本">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.3 - Linux下實現進程守護","level":"1.4.3","depth":2,"next":{"title":"3.4 - Linux進程守護一鍵腳本","level":"1.4.4","depth":2,"path":"3 - 其他配置/3.4 - Linux進程守護一鍵腳本.md","ref":"3 - 其他配置/3.4 - Linux進程守護一鍵腳本.md","articles":[]},"previous":{"title":"3.2 - 免費獲取SSL證書","level":"1.4.2","depth":2,"path":"3 - 其他配置/3.2 - 免費獲取SSL證書.md","ref":"3 - 其他配置/3.2 - 免費獲取SSL證書.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3 - 其他配置/3.3 - Linux下實現進程守護.md","mtime":"2021-12-29T12:59:58.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T13:02:02.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
