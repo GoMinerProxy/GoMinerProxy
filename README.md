@@ -12,10 +12,15 @@
   <a>
     <img src="https://img.shields.io/badge/release-bate-orgin.svg" alt="travis">
   </a>
+  <a>
+    <img src="https://img.shields.io/badge/license-apache-orgin.svg" alt="travis">
+  </a>
 </p>
 
 <p align="center">
-  <a href="">文档</a> •
+  <a href="https://gominerproxy.github.io/zh_hk/">文檔(繁體中文)</a> •
+  <a href="https://gominerproxy.github.io/zh_cn/">文檔(简体中文)</a> •
+  <a href="https://gominerproxy.github.io/zh_cn/">Docs(EngLish)</a> •
   <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 討論群组</a> •
   <a href="https://t.me/go_minerproxy">Telegram 通知頻道</a>
 </p>
@@ -32,7 +37,8 @@
 * :art: 精美後台：後台網頁功能全面、統計豐富、黑暗模式、多語言支持
 * :eye_speech_bubble: 完善社區支持：Telegram 群組內可幫助處理解決遇到的各類問題，歡迎提出反饋建議
 * :rocket: 開箱即用：All-In-One 打包，一鍵搭建運行，一鍵配置
-* :family_woman_girl_boy: 多系統支持：Windows Linux均可支持使用，無需額外環境等
+* :family_woman_girl_boy: 多系統支持：Windows Linux MacOS均可支持使用，無需額外環境等
+* :gear: 專業團隊：擁有豐富區塊鏈開發的工作經驗，多名開發人員來自香港科技大學名校
 * :link: 分佈式系統(後續更新)
 * 🌈 ... ...
 
@@ -49,7 +55,7 @@ chmod 777 /root/GoMinerProxy
 # 启动 GoMinerProxy
 /root/GoMinerProxy
 ```
-以上為最簡單的部署示例，您可以參考 [文檔 - 起步](https://github.com/GoMinerProxy/GoMinerProxy) 進行更為完善的部署。 
+以上為最簡單的部署示例，您可以參考 [文檔 - 快速開始](https://gominerproxy.github.io/zh_hk/) 進行更為完善的部署。 
 
 ## :alembic: 技术栈
 
