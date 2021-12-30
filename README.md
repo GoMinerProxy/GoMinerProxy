@@ -3,14 +3,14 @@
   <img src="https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/logo.png" width="350"/>
 </h1>
 
-<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具 (當前正在最後測試，將於最近一天內發出，感興趣可以先加入TG獲取最新開發進度).</h4>
+<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具.</h4>
 
 <p align="center">
   <a>
     <img src="https://img.shields.io/badge/language-golang-green.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/release-bate-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/release-1.0.0-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/license-apache-orgin.svg" alt="travis">
@@ -18,9 +18,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/GoMinerProxy/GoMinerProxy/blob/main/README_zh-cn.md">简体介绍</a> •
   <a href="https://gominerproxy.github.io/zh_hk/">文檔(繁體中文)</a> •
-  <a href="https://gominerproxy.github.io/zh_cn/">文檔(简体中文)</a> •
-  <a href="https://gominerproxy.github.io/zh_cn/">Docs(EngLish)</a> •
+  <a href="https://gominerproxy.github.io/zh_cn/">文档(简体中文)</a> •
   <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 討論群组</a> •
   <a href="https://t.me/go_minerproxy">Telegram 通知頻道</a>
 </p>
@@ -44,19 +44,25 @@
 
 ## :hammer_and_wrench: 部署
 
-Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序，直接運行即可。
+最新軟件版本請見：<a href="https://github.com/GoMinerProxy/GoMinerProxy/releases">Github Release</a></br>
+Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序，直接運行即可。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.1%20-%20Windows%E7%B3%BB%E7%B5%B1.html">Windows詳細教程</a>
 </br>
-Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。 
+Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
 ```shell
-# 下载 软件
-wget release_url -O /root/GoMinerProxy
+# 下述下载地址为示例，请勿原样复制，请见 Github Release 右键复制最新版本和对应版本的链接
+wget release_url
+# 解压 tar.gz 压缩包
+tar -zxvf GoMainerProxy_v1.0.0_linux_amd64.tar.gz
+# 进入到子目录
+cd GoMainerProxy_v1.0.0_linux_amd64
 # 赋予执行权限
-chmod 777 /root/GoMinerProxy
+chmod 777 GoMinerProxy
 # 启动 GoMinerProxy
-/root/GoMinerProxy
+./GoMinerProxy
 ```
 以上為最簡單的部署示例，您可以參考 [文檔 - 快速開始](https://gominerproxy.github.io/zh_hk/) 進行更為完善的部署。 
 
 ## :alembic: 技术栈
 
-* [Go ](https://golang.org/) + [Gin](https://github.com/gin-gonic/gin)
+* [Go](https://golang.org/) + [Gin](https://github.com/gin-gonic/gin)
+* [NodeJs](https://nodejs.org/)
