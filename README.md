@@ -48,6 +48,8 @@
 Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序，直接運行即可。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.1%20-%20Windows%E7%B3%BB%E7%B5%B1.html">Windows詳細教程</a>
 </br>
 Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
+
+### Linux一键部署
 ```shell
 # 下述下载地址为示例，请勿原样复制，请见 Github Release 右键复制最新版本和对应版本的链接
 wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.1/GoMainerProxy_v1.0.1_linux_amd64.tar.gz
@@ -57,8 +59,15 @@ tar -zxvf GoMainerProxy_v1.0.1_linux_amd64.tar.gz
 cd GoMainerProxy_v1.0.1_linux_amd64
 # 赋予执行权限
 chmod 777 GoMinerProxy
+# 创建窗口
+screen -S go_miner_proxy
 # 启动 GoMinerProxy
 ./GoMinerProxy
+```
+
+```shell
+# 再次SSH链接可以使用下述指令查看输出
+screen -r go_miner_proxy
 ```
 以上為最簡單的部署示例，您可以參考 [文檔 - 快速開始](https://gominerproxy.github.io/zh_hk/) 進行更為完善的部署。 
 
