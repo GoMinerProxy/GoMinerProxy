@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/logo.png" width="350"/>
 </h1>
 
-<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具. (當前正在最後測試，將於東八區30号當天內，感興趣可以先加入TG獲取最新開發進度)</h4>
+<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具. </h4>
 
 <p align="center">
   <a>
@@ -50,7 +50,7 @@ Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序
 Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
 ```shell
 # 下述下载地址为示例，请勿原样复制，请见 Github Release 右键复制最新版本和对应版本的链接
-wget release_url
+wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.0/GoMainerProxy_v1.0.0_linux_amd64.tar.gz
 # 解压 tar.gz 压缩包
 tar -zxvf GoMainerProxy_v1.0.0_linux_amd64.tar.gz
 # 进入到子目录
