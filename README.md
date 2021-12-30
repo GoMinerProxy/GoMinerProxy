@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/logo.png" width="350"/>
 </h1>
 
-<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具.</h4>
+<h4 align="center">基於GoLang的高性能多線程ETH礦池轉發中繼代理工具. (當前正在最後測試，將於東八區30号當天內，感興趣可以先加入TG獲取最新開發進度)</h4>
 
 <p align="center">
   <a>
