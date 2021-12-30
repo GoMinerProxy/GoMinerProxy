@@ -49,7 +49,7 @@ Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序
 </br>
 Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
 
-### Linux一键部署
+### Linux一鍵部署
 ```shell
 # 下述下载地址为示例，请勿原样复制，请见 Github Release 右键复制最新版本和对应版本的链接
 wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.1/GoMainerProxy_v1.0.1_linux_amd64.tar.gz
