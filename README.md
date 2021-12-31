@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/language-golang-green.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/release-1.0.1-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/release-1.0.2-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/license-apache-orgin.svg" alt="travis">
@@ -49,20 +49,14 @@ Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序
 </br>
 Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
 
-### Linux一鍵部署
+### Linux一鍵脚本
 ```shell
-# 下述下载地址为示例，请勿原样复制，请见 Github Release 右键复制最新版本和对应版本的链接
-wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.1/GoMainerProxy_v1.0.1_linux_amd64.tar.gz
-# 解压 tar.gz 压缩包
-tar -zxvf GoMainerProxy_v1.0.1_linux_amd64.tar.gz
-# 进入到子目录
-cd GoMainerProxy_v1.0.1_linux_amd64
-# 赋予执行权限
-chmod 777 GoMinerProxy
-# 创建窗口
-screen -S go_miner_proxy
-# 启动 GoMinerProxy
-./GoMinerProxy
+# 一键安装
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
+# 一键卸载
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/uninstall.sh)
+# 一键更新到最新版本
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/update.sh)
 ```
 
 ```shell
