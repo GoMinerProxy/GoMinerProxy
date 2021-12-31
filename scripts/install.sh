@@ -17,4 +17,4 @@ screen -r go_miner_proxy -p 0 -X stuff $'\n'
 echo "GoMinerProxy 已經安裝完成並已啟動"
 echo "已啟動網頁後台，默認端口 9998，密碼 admin"
 echo "請您及時連接網頁後台並修改默認密碼，防止被人爆破"
-echo "您可以使用指令screen -r go_miner_proxy查看程序輸出" 
+echo "您可以使用指令screen -r go_miner_proxy查看程序輸出"
