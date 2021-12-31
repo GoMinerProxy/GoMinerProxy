@@ -51,6 +51,10 @@ Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目�
 
 ### Linux一鍵脚本
 ```shell
+# 先安装curl/wget/screen软件
+# Centos执行 yum install curl wget screen -y
+# Ubuntu执行 apt-get update -y && apt install curl wget screen -y
+
 # 一键安装GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
 # 一键卸载GoMinerProxy
