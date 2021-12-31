@@ -1,5 +1,5 @@
 #!/bin/bash
-wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.2/GoMinerProxy_v1.0.2_linux_amd64.tar.gz
+wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.2/GoMinerProxy_v1.0.2_linux_amd64.tar.gz -O GoMinerProxy_v1.0.2_linux_amd64.tar.gz
 
 screen -X -S go_miner_proxy quit
 rm -rf ./go_miner_proxy/GoMinerProxy
