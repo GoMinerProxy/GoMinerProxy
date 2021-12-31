@@ -1,5 +1,5 @@
 #!/bin/bash
 while true
 do
-    GoMinerProxy
+    ./go_miner_proxy
 done
