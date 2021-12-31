@@ -57,6 +57,8 @@ bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/ma
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/uninstall.sh)
 # 一键更新到最新版本
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/update.sh)
+# 服务器重启后重新打开软件
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/start.sh)
 ```
 
 ```shell
