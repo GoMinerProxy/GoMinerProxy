@@ -51,14 +51,16 @@ Linux 可按照下述指令运行，请注意下载链接需要适用於您目�
 
 ### Linux一键脚本
 ```shell
-# 一键安装
+# 一键安装GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
-# 一键卸载
+# 一键卸载GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/uninstall.sh)
-# 一键更新到最新版本
+# 一键更新GoMinerProxy到最新版本
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/update.sh)
-# 服务器重启后重新打开软件
+# 服务器重启后打开 GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/start.sh)
+# 重启 GoMinerProxy
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/restart.sh)
 ```
 
 ```shell
