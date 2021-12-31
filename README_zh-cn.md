@@ -59,7 +59,7 @@ Linux 可按照下述指令运行，请注意下载链接需要适用於您目�
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
 # 一键卸载GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/uninstall.sh)
-# 一键更新GoMinerProxy到最新版本
+# 一键更新GoMinerProxy到最新版本，可以不关闭GoMinerProxy闪断更新
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/update.sh)
 # 服务器重启后打开 GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/start.sh)
