@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/language-golang-green.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/release-1.0.3-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/release-1.0.4-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/license-apache-orgin.svg" alt="travis">
