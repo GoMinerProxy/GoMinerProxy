@@ -1,10 +1,10 @@
 #!/bin/bash
-wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.5/GoMinerProxy_v1.0.5_linux_amd64.tar.gz -O GoMinerProxy_v1.0.5_linux_amd64.tar.gz
+wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.0.6/GoMinerProxy_v1.0.6_linux_amd64.tar.gz -O GoMinerProxy_v1.0.6_linux_amd64.tar.gz
 
 screen -X -S go_miner_proxy quit
 rm -rf ./go_miner_proxy/GoMinerProxy
 
-tar -zxvf GoMinerProxy_v1.0.5_linux_amd64.tar.gz -C ./go_miner_proxy
+tar -zxvf GoMinerProxy_v1.0.6_linux_amd64.tar.gz -C ./go_miner_proxy
 chmod 777 ./go_miner_proxy/GoMinerProxy
 
 screen -dmS go_miner_proxy
