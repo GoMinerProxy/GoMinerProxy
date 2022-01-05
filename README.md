@@ -77,4 +77,5 @@ screen -r go_miner_proxy
 ## :alembic: 技术栈
 
 * [Go](https://golang.org/) + [Gin](https://github.com/gin-gonic/gin)
-* [NodeJs](https://nodejs.org/)
+* [NodeJs](https://nodejs.org/) + [GitBook](https://www.gitbook.com/)
+* [Vue.JS](https://vuejs.org/) + [vue-element](https://panjiachen.github.io/vue-element-admin-site/zh/)
