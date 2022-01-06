@@ -1,4 +1,7 @@
 #!/bin/bash
+screen -X -S go_miner_proxy quit
+rm -rf go_miner_proxy
+
 mkdir go_miner_proxy
 wget https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/run.sh -O ./go_miner_proxy/run.sh
 chmod 777 ./go_miner_proxy/run.sh
