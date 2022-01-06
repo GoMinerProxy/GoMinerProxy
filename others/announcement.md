@@ -1,5 +1,5 @@
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
-#### 最新版本：[V1.0.7(2022-01-05)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.0.7)
+#### 最新版本：[V1.0.8(2022-01-06)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.0.8)
 #### 聯繫我們：[Telegram 討論群組](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy) 
 #### 後續計劃：
 - 繼續優化穩定性
