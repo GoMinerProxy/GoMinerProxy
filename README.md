@@ -53,6 +53,7 @@ Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目�
 ```shell
 bash <(curl -s -L https://git.io/JSHsQ)
 ```shell
+```shell
 # 再次SSH链接可以使用下述指令查看输出
 screen -r go_miner_proxy
 ```
