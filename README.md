@@ -55,7 +55,7 @@ Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目�
 # Centos执行 yum install curl wget screen -y
 # Ubuntu执行 apt-get update -y && apt install curl wget screen -y
 
-# 下述脚本均需要在使用安装脚本时相同的路径执行
+# 默认安装路径/root/go_miner_proxy
 # 一键安装GoMinerProxy
 bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
 # 一键卸载GoMinerProxy
