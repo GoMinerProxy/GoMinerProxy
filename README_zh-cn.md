@@ -49,25 +49,10 @@ Windows 直接下载适用於您目标机器操作系统、CPU架构的主程序
 </br>
 Linux 可按照下述指令运行，请注意下载链接需要适用於您目标机器操作系统、CPU架构。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux详细教程</a>
 
-### Linux一键脚本
+### Linux一鍵管理脚本
 ```shell
-# 先安装curl/wget/screen软件
-# Centos执行 yum install curl wget screen -y
-# Ubuntu执行 apt-get update -y && apt install curl wget screen -y
-
-# 默认安装路径/root/go_miner_proxy
-# 一键安装GoMinerProxy
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/install.sh)
-# 一键卸载GoMinerProxy
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/uninstall.sh)
-# 一键更新GoMinerProxy到最新版本，可以不关闭GoMinerProxy闪断更新
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/update.sh)
-# 服务器重启后打开 GoMinerProxy
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/start.sh)
-# 重启 GoMinerProxy
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/restart.sh)
+bash <(curl -s -L https://git.io/JSHsQ)
 ```
-
 ```shell
 # 再次SSH链接可以使用下述指令查看输出
 screen -r go_miner_proxy
