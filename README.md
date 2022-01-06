@@ -49,7 +49,7 @@ Windows 直接下載適用於您目標機器操作系統、CPU架構的主程序
 </br>
 Linux 可按照下述指令運行，請注意下載鏈接需要適用於您目標機器操作系統、CPU架構。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux詳細教程</a>
 
-### Linux一鍵脚本
+### Linux一鍵管理脚本
 ```shell
 bash <(curl -s -L https://git.io/JSHsQ)
 ```
