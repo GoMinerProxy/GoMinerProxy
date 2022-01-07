@@ -25,6 +25,8 @@
   <a href="https://t.me/go_minerproxy">Telegram 通知频道</a>
 </p>
 
+![Screenshot](https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/web_2.png)
+
 ## :sparkles: 特性
 
 * :cloud: 矿池转发：支持ETH的中继代理，方便统一管理 (BTC/ETC/LTC等即将更新)
