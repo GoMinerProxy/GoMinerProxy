@@ -7,10 +7,10 @@
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/Release-1.2.0-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Release-1.2.1_ETH/ETC-orgin.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/Last_Update-2022_01_11-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Last_Update-2022_01_13-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Language-GoLang-green.svg" alt="travis">
@@ -32,7 +32,7 @@
 
 ## :sparkles: 特性
 
-* :cloud: 礦池轉發：支持ETH的中繼代理，方便統一管理 (BTC/ETC/LTC等即将更新)
+* :cloud: 礦池轉發：支持ETH/ETC的中繼代理，方便統一管理 (BTC/LTC等即将更新)
 * :zap: 超高性能：採用高效率的GoLang語言編寫，並對多線程進行優化
 * 💻 自定義抽水：支持中繼平台自定義抽水比例進行抽水，方便賺取服務器維護成本
 * 📚 多種抽水算法：用戶可自選各種抽水算法，防止算力出現週期函數或心跳圖的情況
