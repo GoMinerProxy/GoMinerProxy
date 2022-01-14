@@ -129,6 +129,18 @@ stop(){
     echo "GoMinerProxy 已停止"
 }
 
+change_limit(){
+    change_flag="n"
+    if [ $(grep -c "root soft nofile" /etc/security/limits.conf) -eq '0' ]; then
+        echo "root soft nofile 100000" >>/etc/security/limits.conf
+        change_flag="y"
+    fi
+
+    if [[ "change_flag" = "y" ]]; then
+        echo "系統連接數限制已修改，手動重啟下系統即可生效"
+    fi
+}
+
 
 echo "======================================================="
 echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
@@ -139,8 +151,9 @@ echo "  3、更  新"
 echo "  4、启  动"
 echo "  5、重  启"
 echo "  6、停  止"
+echo "  7、一鍵解除Linux連接數限制(需手動重啟系統生效)"
 echo "======================================================="
-read -p "$(echo -e "請選擇[1-6]：")" choose
+read -p "$(echo -e "請選擇[1-7]：")" choose
 case $choose in
     1)
         install
@@ -159,6 +172,9 @@ case $choose in
         ;;
     6)
         stop
+        ;;
+    7)
+        change_limit
         ;;
     *)
         echo "請輸入正確的數字！"
