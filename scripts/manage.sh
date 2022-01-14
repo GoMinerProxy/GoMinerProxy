@@ -145,6 +145,12 @@ change_limit(){
 }
 
 
+check_limit(){
+    echo -n "您的系統當前連接限制："
+    ulimit -n
+}
+
+
 echo "======================================================="
 echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
 echo "                                   腳本版本：V1.2.1"
@@ -155,8 +161,9 @@ echo "  4、启  动"
 echo "  5、重  启"
 echo "  6、停  止"
 echo "  7、一鍵解除Linux連接數限制(需手動重啟系統生效)"
+echo "  8、查看當前系統連接數限制"
 echo "======================================================="
-read -p "$(echo -e "請選擇[1-7]：")" choose
+read -p "$(echo -e "請選擇[1-8]：")" choose
 case $choose in
     1)
         install
@@ -178,6 +185,9 @@ case $choose in
         ;;
     7)
         change_limit
+        ;;
+    8)
+        check_limit
         ;;
     *)
         echo "請輸入正確的數字！"
