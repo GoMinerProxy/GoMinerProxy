@@ -136,7 +136,7 @@ change_limit(){
         change_flag="y"
     fi
 
-    if [[ "change_flag" = "y" ]]; then
+    if [[ "$change_flag" = "y" ]]; then
         echo "系統連接數限制已修改，手動重啟下系統即可生效"
     fi
 }
