@@ -138,6 +138,9 @@ change_limit(){
 
     if [[ "$change_flag" = "y" ]]; then
         echo "系統連接數限制已修改，手動重啟下系統即可生效"
+    else
+        echo -n "您的系統連接數限制可能已修改，當前連接限制："
+        ulimit -n
     fi
 }
 
