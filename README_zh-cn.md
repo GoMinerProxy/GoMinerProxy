@@ -4,6 +4,7 @@
 </h1>
 
 <h4 align="center">基於GoLang的高性能多线程ETH矿池转发中继代理工具.</h4>
+<h4 align="center">BTC转发请进(https://github.com/GoMinerProxy/GoMinerProxy-BTC)</h4> 
 
 <p align="center">
   <a>
@@ -32,7 +33,7 @@
 
 ## :sparkles: 特性
 
-* :cloud: 矿池转发：支持ETH/ETC的中继代理，方便统一管理 (BTC/LTC等即将更新)
+* :cloud: 矿池转发：支持ETH/ETC的中继代理，方便统一管理 (LTC等即将更新)
 * :zap: 超高性能：采用高效率的GoLang语言编写，并对多线程进行优化
 * 💻 自定义抽水：支持中继平台自定义抽水比例进行抽水，方便赚取服务器维护成本
 * 📚 多种抽水算法：用户可自选各种抽水算法，防止算力出现周期函数或心跳图的情况
