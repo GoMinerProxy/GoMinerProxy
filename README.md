@@ -8,10 +8,10 @@
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/Release-1.2.1_ETH/ETC-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Release-1.2.2_ETH/ETC-orgin.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/Last_Update-2022_01_14-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Last_Update-2022_01_23-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Language-GoLang-green.svg" alt="travis">
