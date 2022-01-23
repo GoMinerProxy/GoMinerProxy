@@ -1,5 +1,5 @@
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
-#### 最新版本：[V1.2.2_ETH/ETC(2022-01-23)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.2.2)
+#### 最新版本：[V1.2.2_ETHASH(2022-01-23)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.2.2)
 #### 聯繫我們：[Telegram 討論群組(歡迎向我們提出建議)](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy) 
 #### 更新內容：此次更新強烈推薦更新。從1.2.0以下版本升級需要重新配置代理池的上游礦池以及抽水，請1.2.0以下版本謹慎更新！！！
 - 代理池新增"本地算力百分比"功能，具體功能：修改用戶礦池處顯示的本地提交算力，可搭配抽水使用。默認100%為不修改，修改後顯示為"設置值%*實際本地提交算力"。例：設置為99%，用戶實際本地算力為300Mh/s，礦池處可顯示為297Mh/s
