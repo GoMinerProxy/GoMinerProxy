@@ -36,8 +36,8 @@ install(){
     wget https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/scripts/run.sh -O /root/go_miner_proxy/run.sh
     chmod 777 /root/go_miner_proxy/run.sh
 
-    wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.2.3/GoMinerProxy_v1.2.3_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.3_linux_amd64.tar.gz
-    tar -zxvf /root/GoMinerProxy_v1.2.3_linux_amd64.tar.gz -C /root/go_miner_proxy
+    wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.2.4/GoMinerProxy_v1.2.4_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.4_linux_amd64.tar.gz
+    tar -zxvf /root/GoMinerProxy_v1.2.4_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -47,7 +47,7 @@ install(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy V1.2.3已經安裝到/root/go_miner_proxy"
+    echo "GoMinerProxy V1.2.4已經安裝到/root/go_miner_proxy"
     echo "已啟動網頁後台，默認端口 9998，密碼 admin"
     echo "請您及時連接網頁後台並修改默認密碼，防止被人爆破"
     echo "您可以使用指令screen -r go_miner_proxy查看程序輸出"
@@ -69,14 +69,14 @@ uninstall(){
 
 
 update(){
-    wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.2.3/GoMinerProxy_v1.2.3_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.3_linux_amd64.tar.gz
+    wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.2.4/GoMinerProxy_v1.2.4_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.4_linux_amd64.tar.gz
 
     if screen -list | grep -q "go_miner_proxy"; then
         screen -X -S go_miner_proxy quit
     fi
     rm -rf /root/go_miner_proxy/GoMinerProxy
 
-    tar -zxvf /root/GoMinerProxy_v1.2.3_linux_amd64.tar.gz -C /root/go_miner_proxy
+    tar -zxvf /root/GoMinerProxy_v1.2.4_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -86,7 +86,7 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy 已經更新至V1.2.3版本並啟動"
+    echo "GoMinerProxy 已經更新至V1.2.4版本並啟動"
     echo "您可以使用指令screen -r go_miner_proxy查看程序輸出"
 }
 
@@ -153,7 +153,7 @@ check_limit(){
 
 echo "======================================================="
 echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
-echo "                                   腳本版本：V1.2.3"
+echo "                                   腳本版本：V1.2.4"
 echo "  1、安  装"
 echo "  2、卸  载"
 echo "  3、更  新"

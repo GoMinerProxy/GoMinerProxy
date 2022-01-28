@@ -3,15 +3,15 @@
   <img src="https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/logo.png" width="350"/>
 </h1>
 
-<h4 align="center">基於GoLang的高性能多线程ETH矿池转发中继代理工具.</h4>
+<h4 align="center">基於GoLang的高性能多线程ETH/ETC矿池转发中继代理工具.</h4>
 <h4 align="center">BTC转发请进(https://github.com/GoMinerProxy/GoMinerProxy-BTC)</h4> 
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/Release-1.2.3_ETH/ETC-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Release-1.2.4_ETH/ETC-orgin.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/Last_Update-2022_01_27-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Last_Update-2022_01_28-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Language-GoLang-green.svg" alt="travis">
