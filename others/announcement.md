@@ -1,3 +1,4 @@
+## 我們近日注意到在大算力抽水的情況下，如果目標礦池為動態難度難度的礦池(如幣印等)的情況下，將會導致抽水結果不準確的現象，我們將在下個版本嘗試解決這個現象，目前建議優先抽往靜態難度的礦池(如E池等)。
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.2.3_ETHASH(2022-01-27)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.2.3)
 #### 聯繫我們：[Telegram 討論群組(歡迎向我們提出建議)](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy) 
