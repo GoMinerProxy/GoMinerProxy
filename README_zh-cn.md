@@ -8,10 +8,10 @@
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/Release-1.2.5_ETH/ETC-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Release-1.3.0_ETHASH-orgin.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/Last_Update-2022_01_29-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Last_Update-2022_02_04-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Language-GoLang-green.svg" alt="travis">
@@ -35,13 +35,13 @@
 
 * :cloud: 矿池转发：支持ETH/ETC的中继代理，方便统一管理 (LTC等即将更新)
 * :zap: 超高性能：采用高效率的GoLang语言编写，并对多线程进行优化
-* 💻 自定义抽水：支持中继平台自定义抽水比例进行抽水，方便赚取服务器维护成本
+* 💻 自定义抽水：支持中继平台自定义抽水比例进行抽水，并支持在不关闭代理池的情况下进行动态修改
 * 📚 多种抽水算法：用户可自选各种抽水算法，防止算力出现周期函数或心跳图的情况
 * 💾 安全稳定：支持TCP、SSL等方式，并对CC攻击编写一定的策略进行防护
-* :gear: 独家前置代理模式：支持中转伺服器到矿池端的加密与混淆
+* :gear: 独家前置代理模式：支持中转伺服器到矿池端的加密与混淆，可内网部署
 * :outbox_tray: 批量转发：一个软件即可开启对多个矿池的转发，无需开启多个进程
 * :card_file_box: 热修改：配置均可网页後台上热修改，无需再修改繁琐配置文件再重启
-* :art: 精美後台：後台网页功能全面、统计丰富、黑暗模式、多语言支持
+* :art: 精美後台：後台网页功能全面、折线图、统计丰富、黑暗模式、多语言支持
 * :eye_speech_bubble: 完善社区支持：Telegram 群组内可帮助处理解决遇到的各类问题，欢迎提出反馈建议
 * :rocket: 开箱即用：All-In-One 打包，一键搭建运行，一键配置
 * :family_woman_girl_boy: 多系统支持：Windows Linux MacOS均可支持使用，无需额外环境等

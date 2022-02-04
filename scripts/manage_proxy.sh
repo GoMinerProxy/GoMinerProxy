@@ -21,23 +21,15 @@ install(){
 
     $cmd update -y
     $cmd install curl wget screen -y
+    
     mkdir /root/go_miner_proxy
-    echo "您是否需要開啟SSL(開啟SSL後將使用自簽證書運行，如果內核"
-    read -p "校驗證書則需要自行上傳自己證書的域名)[yes/no]：" flag
-    if [ -z $flag ];then
-         echo "您未正確輸入" && exit 1
-    else
-        if [ "$flag" = "yes" -o "$flag" = "ye" -o "$flag" = "y" ];then
-            wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/others/cert.tar.gz -O /root/go_miner_proxy/cert.tar.gz
-            tar -zxvf /root/go_miner_proxy/cert.tar.gz -C /root/go_miner_proxy
-        fi
-    fi
-
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/others/cert.tar.gz -O /root/go_miner_proxy/cert.tar.gz
+    tar -zxvf /root/go_miner_proxy/cert.tar.gz -C /root/go_miner_proxy
     wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/run.sh -O /root/go_miner_proxy/run.sh
     chmod 777 /root/go_miner_proxy/run.sh
 
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.2.5_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.5_linux_amd64.tar.gz
-    tar -zxvf /root/GoMinerProxy_v1.2.5_linux_amd64.tar.gz -C /root/go_miner_proxy
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.0_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.0_linux_amd64.tar.gz
+    tar -zxvf /root/GoMinerProxy_v1.3.0_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -47,7 +39,7 @@ install(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy V1.2.5已經安裝到/root/go_miner_proxy"
+    echo "GoMinerProxy V1.3.0已經安裝到/root/go_miner_proxy"
     echo "已啟動網頁後台，默認端口 9998，密碼 admin"
     echo "請您及時連接網頁後台並修改默認密碼，防止被人爆破"
     echo "您可以使用指令screen -r go_miner_proxy查看程序輸出"
@@ -69,14 +61,14 @@ uninstall(){
 
 
 update(){
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.2.5_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.2.5_linux_amd64.tar.gz
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.0_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.0_linux_amd64.tar.gz
 
     if screen -list | grep -q "go_miner_proxy"; then
         screen -X -S go_miner_proxy quit
     fi
     rm -rf /root/go_miner_proxy/GoMinerProxy
 
-    tar -zxvf /root/GoMinerProxy_v1.2.5_linux_amd64.tar.gz -C /root/go_miner_proxy
+    tar -zxvf /root/GoMinerProxy_v1.3.0_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -86,7 +78,7 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy 已經更新至V1.2.5版本並啟動"
+    echo "GoMinerProxy 已經更新至V1.3.0版本並啟動"
     echo "您可以使用指令screen -r go_miner_proxy查看程序輸出"
 }
 
@@ -154,7 +146,7 @@ check_limit(){
 
 echo "======================================================="
 echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
-echo "                                   腳本版本：V1.2.5"
+echo "                                   腳本版本：V1.3.0"
 echo "  1、安  装"
 echo "  2、卸  载"
 echo "  3、更  新"
