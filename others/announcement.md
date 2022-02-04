@@ -1,4 +1,3 @@
-### CrazyPool用戶可在自定義礦池處使用3333端口的TCP方式連接礦池
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.3.0_ETHASH(2022-02-04)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.0)
 #### 聯繫我們：[Telegram 討論群組(歡迎向我們提出建議)](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy)
