@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Release-1.3.0_ETHASH-orgin.svg" alt="travis">
   </a>
   <a>
-    <img src="https://img.shields.io/badge/Last_Update-2022_02_04-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Last_Update-2022_02_06-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Language-GoLang-green.svg" alt="travis">
@@ -29,7 +29,7 @@
   <a href="https://t.me/go_minerproxy">Telegram 通知頻道</a>
 </p>
 
-![Screenshot](https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/web_2.png)
+![Screenshot](https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/web_1.png)
 
 ## :sparkles: 特性
 
