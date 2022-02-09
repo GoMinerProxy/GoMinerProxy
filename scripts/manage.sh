@@ -78,7 +78,9 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
+    sleep 2s
     echo "GoMinerProxy 已經更新至V1.3.2版本並啟動"
+    cat /root/go_miner_proxy/pwd.txt
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
 
@@ -94,7 +96,7 @@ start(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
-
+    
     echo "GoMinerProxy已啟動"
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
@@ -113,6 +115,7 @@ restart(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
     echo "GoMinerProxy 已經重新啟動"
+    echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
 
 
