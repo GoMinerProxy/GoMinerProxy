@@ -42,6 +42,7 @@ install(){
     sleep 2s
     echo "GoMinerProxy V1.3.2已經安裝到/root/go_miner_proxy"
     cat /root/go_miner_proxy/pwd.txt
+    echo ""
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
 
