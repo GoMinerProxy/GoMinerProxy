@@ -1,4 +1,4 @@
-近期發現有人使用默認密碼惡意掃描程式後臺，請安裝程式後第一時間修改後臺密碼，1.3.2版本程式已改爲隨機密碼。如之前為默認密碼沒有修改，請第一時間檢查自定義礦池中是否出現非自己添加的第三方IP。
+#### 近期發現有人使用默認密碼惡意掃描程式後臺，請安裝程式後第一時間修改後臺密碼，1.3.2版本程式已改爲隨機密碼。如之前為默認密碼沒有修改，請第一時間檢查自定義礦池中是否出現非自己添加的第三方IP。
 ----
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.3.2_ETHASH(2022-02-09)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.2) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
