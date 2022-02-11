@@ -56,7 +56,7 @@ Windows 直接下载适用於您目标机器操作系统、CPU架构的主程序
 </br>
 Linux 可按照下述指令运行，请注意下载链接需要适用於您目标机器操作系统、CPU架构。<a href="https://gominerproxy.github.io/zh_hk/1%20-%20%E5%BF%AB%E9%80%9F%E9%96%8B%E5%A7%8B/1.2%20-%20Linux%E7%B3%BB%E7%B5%B1.html">Linux详细教程</a>
 
-### Linux一鍵管理脚本
+### Linux一键管理脚本(自带崩溃重启，但无开机自启)
 ```shell
 # 海外伺服器可用
 bash <(curl -s -L https://git.io/JSHsQ)
