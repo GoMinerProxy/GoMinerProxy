@@ -1,4 +1,4 @@
-#### 近期發現有人使用默認密碼惡意掃描程式後臺，請檢查自己的後台密碼是否為默認弱密碼。如之前為默認密碼沒有修改，請第一時間檢查自定義礦池中是否出現非自己添加的第三方IP。
+#### 1.3.5版本已完成代碼重構，將於近日更新，目前正在內部測試中。
 ----
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.3.3_ETHASH(2022-02-10)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.3) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
