@@ -1,4 +1,4 @@
-#### 1.3.5版本已完成代碼重構，將於近日更新，目前正在內部測試中。
+#### ETHASH-1.3.5版本已重構完成，完美解決内存使用過多的問題，預計3月1日發佈，如有出現内存使用過多情況的用戶可以優先聯係我們領取測試版本。
 ----
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.3.3_ETHASH(2022-02-10)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.3) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
