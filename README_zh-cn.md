@@ -8,7 +8,7 @@
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/Release-1.3.5_ETHASH-orgin.svg" alt="travis">
+    <img src="https://img.shields.io/badge/Release-1.3.6_ETHASH-orgin.svg" alt="travis">
   </a>
   <a>
     <img src="https://img.shields.io/badge/Last_Update-2022_03_01-orgin.svg" alt="travis">
