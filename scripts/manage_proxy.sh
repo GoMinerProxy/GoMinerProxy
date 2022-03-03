@@ -128,18 +128,50 @@ stop(){
 
 
 change_limit(){
-    change_flag="n"
-    if [ $(grep -c "root soft nofile" /etc/security/limits.conf) -eq '0' ]; then
-        echo "root soft nofile 100000" >>/etc/security/limits.conf
-        change_flag="y"
-    fi
-
-    if [[ "$change_flag" = "y" ]]; then
-        echo "系统连接数限制已修改，手动重启下系统即可生效"
-    else
+    if grep -q "1000000" "/etc/profile"; then
         echo -n "您的系统连接数限制可能已修改，当前连接限制："
         ulimit -n
+        exit
     fi
+
+    cat >> /etc/sysctl.conf <<-EOF
+
+fs.file-max = 1000000
+fs.inotify.max_user_instances = 8192
+
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.ip_local_port_range = 1024 65000
+net.ipv4.tcp_max_syn_backlog = 16384
+net.ipv4.tcp_max_tw_buckets = 6000
+net.ipv4.route.gc_timeout = 100
+
+net.ipv4.tcp_syn_retries = 1
+net.ipv4.tcp_synack_retries = 1
+net.core.somaxconn = 32768
+net.core.netdev_max_backlog = 32768
+net.ipv4.tcp_timestamps = 0
+net.ipv4.tcp_max_orphans = 32768
+
+# forward ipv4
+#net.ipv4.ip_forward = 1
+
+
+EOF
+
+
+
+    cat >> /etc/security/limits.conf <<-EOF
+*               soft    nofile          1000000
+*               hard    nofile          1000000
+EOF
+
+
+    echo "ulimit -SHn 1000000" >> /etc/profile
+    source /etc/profile
+
+    echo "系统连接数限制已修改，手动reboot重启下系统即可生效"
 }
 
 
