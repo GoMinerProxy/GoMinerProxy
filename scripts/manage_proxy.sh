@@ -155,18 +155,13 @@ net.ipv4.tcp_timestamps = 0
 net.ipv4.tcp_max_orphans = 32768
 
 # forward ipv4
-#net.ipv4.ip_forward = 1
-
-
+# net.ipv4.ip_forward = 1
 EOF
-
-
 
     cat >> /etc/security/limits.conf <<-EOF
 *               soft    nofile          1000000
 *               hard    nofile          1000000
 EOF
-
 
     echo "ulimit -SHn 1000000" >> /etc/profile
     source /etc/profile
