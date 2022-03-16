@@ -1,19 +1,15 @@
-#### ETHASH-1.3.6版本已發布，强烈建议1.3.1-1.3.5版本用戶更新！
-----
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
-#### 最新版本：[V1.3.6_ETHASH(2022-03-01)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.6) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
+#### 最新版本：[V1.3.7_ETHASH(2022-03-15)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.7) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
 #### 聯繫我們：[Telegram 討論群組(歡迎向我們提出建議)](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy)
-#### V1.3.6更新內容：此次版本為大版本更新，强烈推荐更新。
-- 對程式進行大幅度優化內存使用(實測60GH算力500帶機量情況下僅需360M內存)
-- 對茉莉(JasMiner)品牌的專業礦機進行優化實現完美兼容，並添加更多專業礦機支持
-- 新增後台-賬戶列表處的搜索框，用於對礦機名/錢包地址/IP地址進行檢索
-- 修改內置礦池列表中HiveOnPool自動節點的地址為eth.hiveon.com:24443
-- 修復動態修改抽水率的情況下可能引發的抽水不准確問題
-- 內置Doh自適應安全化域名解析方案，防止DNS污染情況的出現
-- 添加代理池設置NiceHash/Stratum2協議開關選項
-- 優化主程式啟動時代理池自動開啟的邏輯
-- 優化後台-程式設定處的人性化設計
-- 新增後台-程式設定處的性能報告下載
+#### V1.3.7更新內容：此次版本為小版本更新，强烈芯動系列礦機用戶推荐更新。
+- 內置礦池列表新增F2Pool SSL地址(ethssl-asia.f2pool.com:6698)
+- 修復部分芯動系列礦機提交到礦池後礦機名變成默認defaults的情況
+- 修復部分芯動系列礦機提交到礦池後無效份額過高的問題
+- 針對芯動系列礦機進行針對性優化並實現完美兼容
+- 前端優化：針對部分注意事項添加提示Tips
+- 前端優化：禁止用戶修改開啟狀態下的代理池的抽水錢包地址、礦機名、抽水礦池信息，僅允許修改抽水率
+- 前端優化：用戶修改代理池的抽水錢包地址、礦機名後，添加中文和特殊字符檢測並進行提示
+- 前端優化：修改代理池修改邏輯，需先應用才可以開啟代理池
 #### 注意：1、由於協議差異, 目前無法實現跨協議抽水, 所以如果設置CrazyPool為歸集目標的話需要客戶端均使用NiceHash/Stratum2協議。
 ----
 #### 掉綫原因參考表：
