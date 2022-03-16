@@ -1,5 +1,5 @@
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
-#### 最新版本：[V1.3.7_ETHASH(2022-03-15)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.7) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
+#### 最新版本：[V1.3.7_ETHASH(2022-03-16)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.7) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
 #### 聯繫我們：[Telegram 討論群組(歡迎向我們提出建議)](https://t.me/+afVqEXnxtQAyNWNh)、[GitHub](https://github.com/GoMinerProxy/GoMinerProxy)
 #### V1.3.7更新內容：此次版本為小版本更新，强烈芯動系列礦機用戶推荐更新。
 - 內置礦池列表新增F2Pool SSL地址(ethssl-asia.f2pool.com:6698)
