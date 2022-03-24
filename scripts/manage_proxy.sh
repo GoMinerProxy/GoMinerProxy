@@ -23,12 +23,12 @@ install(){
     $cmd install wget screen -y
     
     mkdir /root/go_miner_proxy
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/others/cert.tar.gz -O /root/go_miner_proxy/cert.tar.gz
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/others/cert.tar.gz -O /root/go_miner_proxy/cert.tar.gz --no-check-certificate
     tar -zxvf /root/go_miner_proxy/cert.tar.gz -C /root/go_miner_proxy
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/run.sh -O /root/go_miner_proxy/run.sh
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/run.sh -O /root/go_miner_proxy/run.sh --no-check-certificate
     chmod 777 /root/go_miner_proxy/run.sh
 
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
     tar -zxvf /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
@@ -62,7 +62,7 @@ uninstall(){
 
 
 update(){
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
 
     if screen -list | grep -q "go_miner_proxy"; then
         screen -X -S go_miner_proxy quit
