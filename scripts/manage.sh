@@ -176,18 +176,21 @@ check_limit(){
 
 
 echo "======================================================="
-echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
-echo "                                   腳本版本：V1.3.9"
-echo "  1、安  装"
-echo "  2、卸  载"
-echo "  3、更  新"
-echo "  4、启  动"
-echo "  5、重  启"
-echo "  6、停  止"
-echo "  7、一鍵解除Linux連接數限制(需手動重啟系統生效)"
-echo "  8、查看當前系統連接數限制"
+echo "GoMinerTool-ETHASH 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
+echo "GoMinerTool-ETHASH One-Click Script，PATH:/root/go_miner_proxy"
+echo "                              腳本版本(Script Version)：V1.3.9"
+echo "  1、安  裝 (Install)"
+echo "  2、卸  載 (Uninstall)"
+echo "  3、更  新 (Update)"
+echo "  4、啟  動 (Start)"
+echo "  5、重  啟 (Restart)"
+echo "  6、停  止 (Stop)"
+echo "  7、一鍵解除Linux連接數限制,需手動重啟系統生效"
+echo "     (Remove the limit on the number of Linux connections,"
+echo "      Need to manually restart the system to take effect.)"
+echo "  8、查看當前系統連接數限制 (View the current system connection limit)"
 echo "======================================================="
-read -p "$(echo -e "請選擇[1-8]：")" choose
+read -p "$(echo -e "請選擇(Choose)[1-8]：")" choose
 case $choose in
     1)
         install
@@ -214,6 +217,6 @@ case $choose in
         check_limit
         ;;
     *)
-        echo "請輸入正確的數字！"
+        echo "請輸入正確的數字！(Please enter the correct number!)"
         ;;
 esac
