@@ -32,7 +32,7 @@
 
 ![Screenshot](https://raw.githubusercontent.com/GoMinerProxy/GoMinerProxy/main/images/web_1.png)
 
-## :sparkles: 特性
+## :sparkles: Function
 
 * :cloud: Mining pool forwarding: support ETH/ETC relay agent, support all Stratum/NiceHash/Stratum2 protocols, and facilitate unified management (other currencies will be updated soon)
 * :zap: Ultra-high performance: written in the efficient GoLang language and optimized for multi-threading
