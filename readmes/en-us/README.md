@@ -59,9 +59,9 @@ Linux You can run it according to the following instructions, please note that t
 
 ### Linux one-click management script (with its own crash restart, but no boot and self-start)
 ```shell
-# Overseas server available
+# except China server available
 bash <(curl -s -L https://git.io/JSHsQ)
-# Continental server available
+# China server available
 bash <(curl -s -L https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/manage_proxy.sh)
 ```
 ```shell
