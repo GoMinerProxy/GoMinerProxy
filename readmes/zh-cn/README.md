@@ -22,9 +22,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/GoMinerProxy/GoMinerProxy/readmes/zh-hk/">繁体中文(zh-hk)</a> •
-  <a href="https://github.com/GoMinerProxy/GoMinerProxy/readmes/zh-cn/">简体中文(zh-cn)</a> •
-  <a href="https://github.com/GoMinerProxy/GoMinerProxy/readmes/en-us/">English(en-us)</a> •
+  <a href="https://github.com/GoMinerProxy/GoMinerProxy/tree/main/readmes/zh-hk">繁体中文(zh-hk)</a> •
+  <a href="https://github.com/GoMinerProxy/GoMinerProxy/tree/main/readmes/zh-cn">简体中文(zh-cn)</a> •
+  <a href="https://github.com/GoMinerProxy/GoMinerProxy/tree/main/readmes/en-us/">English(en-us)</a> •
   <a href="https://gominerproxy.github.io/zh_hk/">文档</a> •
   <a href="https://t.me/+afVqEXnxtQAyNWNh">Telegram 讨论群组</a> •
   <a href="https://t.me/go_minerproxy">Telegram 通知频道</a>
