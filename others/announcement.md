@@ -1,6 +1,6 @@
-#### GoMinerTool-BTC 中轉已更新V1.1.0版本，[點擊查看更多信息](https://github.com/GoMinerProxy/GoMinerTool-BTC/releases/tag/1.1.0)。
-#### GoMinerTool-T2S TCP轉SSL工具已發布V1.0.0版本，[點擊查看更多信息](https://github.com/GoMinerProxy/GoMinerTool-TCP2SSL)。
-#### GoMinerTool-ETHASH V1.3.11正在抓緊開發中，即將修復BUG，更新實用功能，優化算法。
+#### GoMinerTool-BTC 中轉已更新V1.1.1版本，[點擊查看更多信息](https://github.com/GoMinerProxy/GoMinerTool-BTC/releases/tag/1.1.1)。
+#### GoMinerTool-T2S TCP轉SSL工具已發布V1.0.0版本，支持所有幣種，[點擊查看更多信息](https://github.com/GoMinerProxy/GoMinerTool-TCP2SSL)。
+#### GoMinerTool-ETHASH V1.4.0正在抓緊開發中，预计三天左右发布，更新精準抽水算法(降低NiceHash協議抽水損耗，適配跨礦池抽水和動態難度)。
 ----
 #### 當前版本：{BUILD_VERSION}({BUILD_DATE})
 #### 最新版本：[V1.3.9_ETHASH(2022-03-23)](https://github.com/GoMinerProxy/GoMinerProxy/releases/tag/1.3.9) - [[歷史更新日誌]](https://github.com/GoMinerProxy/GoMinerProxy/releases)
