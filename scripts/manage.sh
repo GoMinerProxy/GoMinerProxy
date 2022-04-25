@@ -135,6 +135,7 @@ change_limit(){
     fi
 
     cat >> /etc/sysctl.conf <<-EOF
+
 fs.file-max = 1000000
 fs.inotify.max_user_instances = 8192
 

@@ -43,7 +43,7 @@ install(){
     echo "GoMinerTool-ETHASH V1.4.0已經安裝到/root/go_miner_proxy"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
-    echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
+    echo "您可以使用指令screen -r go_miner_proxy查看程式端口和密碼"
 }
 
 
