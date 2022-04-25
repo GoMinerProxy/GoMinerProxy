@@ -39,7 +39,7 @@ install(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    sleep 2s
+    sleep 4s
     echo "GoMinerTool-ETHASH V1.4.0已經安裝到/root/go_miner_proxy"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
@@ -79,7 +79,7 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    sleep 2s
+    sleep 4s
     echo "GoMinerTool-ETHASH 已經更新至V1.4.0版本並啟動"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
