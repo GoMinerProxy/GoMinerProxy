@@ -175,13 +175,39 @@ check_limit(){
 }
 
 
+update_to_139(){
+    wget https://github.com/GoMinerProxy/GoMinerProxy/releases/download/1.3.9/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
+
+    if screen -list | grep -q "go_miner_proxy"; then
+        screen -X -S go_miner_proxy quit
+    fi
+    rm -rf /root/go_miner_proxy/GoMinerProxy
+
+    tar -zxvf /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -C /root/go_miner_proxy
+    chmod 777 /root/go_miner_proxy/GoMinerProxy
+
+    screen -dmS go_miner_proxy
+    sleep 0.2s
+    screen -r go_miner_proxy -p 0 -X stuff "cd /root/go_miner_proxy"
+    screen -r go_miner_proxy -p 0 -X stuff $'\n'
+    screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
+    screen -r go_miner_proxy -p 0 -X stuff $'\n'
+
+    sleep 4s
+    echo "GoMinerTool-ETHASH 已經更新至V1.3.9版本並啟動"
+    cat /root/go_miner_proxy/pwd.txt
+    echo ""
+    echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
+}
+
+
 echo "======================================================="
 echo "GoMinerTool-ETHASH 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
 echo "GoMinerTool-ETHASH One-Click Script，PATH:/root/go_miner_proxy"
 echo "                              腳本版本(Script Version)：V1.4.0"
 echo "  1、安  裝 (Install)"
 echo "  2、卸  載 (Uninstall)"
-echo "  3、更  新 (Update)"
+echo "  3、更新到最新版本 (Update to the latest version)"
 echo "  4、啟  動 (Start)"
 echo "  5、重  啟 (Restart)"
 echo "  6、停  止 (Stop)"
@@ -189,8 +215,9 @@ echo "  7、一鍵解除Linux連接數限制,需手動重啟系統生效"
 echo "     (Remove the limit on the number of Linux connections,"
 echo "      Need to manually restart the system to take effect.)"
 echo "  8、查看當前系統連接數限制 (View the current system connection limit)"
+echo "  9、更新到V1.3.9 (Update to the V1.3.9)"
 echo "======================================================="
-read -p "$(echo -e "請選擇(Choose)[1-8]：")" choose
+read -p "$(echo -e "請選擇(Choose)[1-9]：")" choose
 case $choose in
     1)
         install
@@ -215,6 +242,9 @@ case $choose in
         ;;
     8)
         check_limit
+        ;;
+    9)
+        update_to_139
         ;;
     *)
         echo "請輸入正確的數字！(Please enter the correct number!)"
