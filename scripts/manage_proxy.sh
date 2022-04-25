@@ -13,10 +13,10 @@ fi
 
 install(){
     if [ -d "/root/go_miner_proxy" ]; then
-        echo -e "檢測到您已安裝GoMinerProxy，請勿重複安裝，如您確認您未安裝請使用rm -rf /root/go_miner_proxy指令" && exit 1
+        echo -e "檢測到您已安裝GoMinerTool-ETHASH，請勿重複安裝，如您確認您未安裝請使用rm -rf /root/go_miner_proxy指令" && exit 1
     fi
     if screen -list | grep -q "go_miner_proxy"; then
-        echo -e "檢測到您的GoMinerProxy已啟動，請勿重複安裝" && exit 1
+        echo -e "檢測到您的GoMinerTool-ETHASH已啟動，請勿重複安裝" && exit 1
     fi
 
     $cmd update -y
@@ -28,8 +28,8 @@ install(){
     wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/run.sh -O /root/go_miner_proxy/run.sh --no-check-certificate
     chmod 777 /root/go_miner_proxy/run.sh
 
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
-    tar -zxvf /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -C /root/go_miner_proxy
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.0_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.0_linux_amd64.tar.gz --no-check-certificate
+    tar -zxvf /root/GoMinerTool_v1.4.0_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -40,7 +40,7 @@ install(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
     sleep 2s
-    echo "GoMinerProxy V1.3.9已經安裝到/root/go_miner_proxy"
+    echo "GoMinerTool-ETHASH V1.4.0已經安裝到/root/go_miner_proxy"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
@@ -48,28 +48,28 @@ install(){
 
 
 uninstall(){
-    read -p "您確認您是否刪除GoMinerProxy)[yes/no]：" flag
+    read -p "您確認您是否刪除GoMinerTool-ETHASH)[yes/no]：" flag
     if [ -z $flag ];then
          echo "您未正確輸入" && exit 1
     else
         if [ "$flag" = "yes" -o "$flag" = "ye" -o "$flag" = "y" ];then
             screen -X -S go_miner_proxy quit
             rm -rf /root/go_miner_proxy
-            echo "GoMinerProxy已成功從您的伺服器上卸載"
+            echo "GoMinerTool-ETHASH已成功從您的伺服器上卸載"
         fi
     fi
 }
 
 
 update(){
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.0_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.0_linux_amd64.tar.gz --no-check-certificate
 
     if screen -list | grep -q "go_miner_proxy"; then
         screen -X -S go_miner_proxy quit
     fi
     rm -rf /root/go_miner_proxy/GoMinerProxy
 
-    tar -zxvf /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -C /root/go_miner_proxy
+    tar -zxvf /root/GoMinerTool_v1.4.0_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -80,7 +80,7 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
     sleep 2s
-    echo "GoMinerProxy 已經更新至V1.3.9版本並啟動"
+    echo "GoMinerTool-ETHASH 已經更新至V1.4.0版本並啟動"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
@@ -89,7 +89,7 @@ update(){
 
 start(){
     if screen -list | grep -q "go_miner_proxy"; then
-        echo -e "檢測到您的GoMinerProxy已啟動，請勿重複啟動" && exit 1
+        echo -e "檢測到您的GoMinerTool-ETHASH已啟動，請勿重複啟動" && exit 1
     fi
     
     screen -dmS go_miner_proxy
@@ -99,7 +99,7 @@ start(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy已啟動"
+    echo "GoMinerTool-ETHASH已啟動"
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
 
@@ -116,14 +116,14 @@ restart(){
     screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
-    echo "GoMinerProxy 已經重新啟動"
+    echo "GoMinerTool-ETHASH 已經重新啟動"
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
 }
 
 
 stop(){
     screen -X -S go_miner_proxy quit
-    echo "GoMinerProxy 已停止"
+    echo "GoMinerTool-ETHASH 已停止"
 }
 
 
@@ -177,8 +177,8 @@ check_limit(){
 
 
 echo "======================================================="
-echo "GoMinerProxy 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
-echo "                                   腳本版本：V1.3.9"
+echo "GoMinerTool-ETHASH 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
+echo "                                   腳本版本：V1.4.0"
 echo "  1、安  装"
 echo "  2、卸  载"
 echo "  3、更  新"
