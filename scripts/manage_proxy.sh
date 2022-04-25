@@ -176,6 +176,32 @@ check_limit(){
 }
 
 
+update_to_139(){
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@b4893d42f88530b0d4baaf5ab379ed97621752e5/release/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -O /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz --no-check-certificate
+
+    if screen -list | grep -q "go_miner_proxy"; then
+        screen -X -S go_miner_proxy quit
+    fi
+    rm -rf /root/go_miner_proxy/GoMinerProxy
+
+    tar -zxvf /root/GoMinerProxy_v1.3.9_linux_amd64.tar.gz -C /root/go_miner_proxy
+    chmod 777 /root/go_miner_proxy/GoMinerProxy
+
+    screen -dmS go_miner_proxy
+    sleep 0.2s
+    screen -r go_miner_proxy -p 0 -X stuff "cd /root/go_miner_proxy"
+    screen -r go_miner_proxy -p 0 -X stuff $'\n'
+    screen -r go_miner_proxy -p 0 -X stuff "./run.sh"
+    screen -r go_miner_proxy -p 0 -X stuff $'\n'
+
+    sleep 4s
+    echo "GoMinerTool-ETHASH 已經更新至V1.3.9版本並啟動"
+    cat /root/go_miner_proxy/pwd.txt
+    echo ""
+    echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
+}
+
+
 echo "======================================================="
 echo "GoMinerTool-ETHASH 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
 echo "                                   腳本版本：V1.4.0"
@@ -187,8 +213,9 @@ echo "  5、重  启"
 echo "  6、停  止"
 echo "  7、一键解除Linux连接数限制(需手动重启系统生效)"
 echo "  8、查看当前系统连接数限制"
+echo "  9、升級到V1.3.9"
 echo "======================================================="
-read -p "$(echo -e "請選擇[1-8]：")" choose
+read -p "$(echo -e "請選擇[1-9]：")" choose
 case $choose in
     1)
         install
@@ -213,6 +240,9 @@ case $choose in
         ;;
     8)
         check_limit
+        ;;
+    9)
+        update_to_139
         ;;
     *)
         echo "請輸入正確的數字！"
