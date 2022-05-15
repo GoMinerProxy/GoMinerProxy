@@ -28,8 +28,8 @@ install(){
     wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/scripts/run.sh -O /root/go_miner_proxy/run.sh --no-check-certificate
     chmod 777 /root/go_miner_proxy/run.sh
 
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.2_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.2_linux_amd64.tar.gz --no-check-certificate
-    tar -zxvf /root/GoMinerTool_v1.4.2_linux_amd64.tar.gz -C /root/go_miner_proxy
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.3_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.3_linux_amd64.tar.gz --no-check-certificate
+    tar -zxvf /root/GoMinerTool_v1.4.3_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -40,7 +40,7 @@ install(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
     sleep 4s
-    echo "GoMinerTool-ETHASH V1.4.2已經安裝到/root/go_miner_proxy"
+    echo "GoMinerTool-ETHASH V1.4.3已經安裝到/root/go_miner_proxy"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
     echo "您可以使用指令screen -r go_miner_proxy查看程式端口和密碼"
@@ -62,14 +62,14 @@ uninstall(){
 
 
 update(){
-    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.2_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.2_linux_amd64.tar.gz --no-check-certificate
+    wget https://cdn.jsdelivr.net/gh/GoMinerProxy/GoMinerProxy@main/release/GoMinerTool_v1.4.3_linux_amd64.tar.gz -O /root/GoMinerTool_v1.4.3_linux_amd64.tar.gz --no-check-certificate
 
     if screen -list | grep -q "go_miner_proxy"; then
         screen -X -S go_miner_proxy quit
     fi
     rm -rf /root/go_miner_proxy/GoMinerProxy
 
-    tar -zxvf /root/GoMinerTool_v1.4.2_linux_amd64.tar.gz -C /root/go_miner_proxy
+    tar -zxvf /root/GoMinerTool_v1.4.3_linux_amd64.tar.gz -C /root/go_miner_proxy
     chmod 777 /root/go_miner_proxy/GoMinerProxy
 
     screen -dmS go_miner_proxy
@@ -80,7 +80,7 @@ update(){
     screen -r go_miner_proxy -p 0 -X stuff $'\n'
 
     sleep 4s
-    echo "GoMinerTool-ETHASH 已經更新至V1.4.2版本並啟動"
+    echo "GoMinerTool-ETHASH 已經更新至V1.4.3版本並啟動"
     cat /root/go_miner_proxy/pwd.txt
     echo ""
     echo "您可以使用指令screen -r go_miner_proxy查看程式輸出"
@@ -230,7 +230,7 @@ update_to_141(){
 
 echo "======================================================="
 echo "GoMinerTool-ETHASH 一鍵腳本，脚本默认安装到/root/go_miner_proxy"
-echo "                                   腳本版本：V1.4.2"
+echo "                                   腳本版本：V1.4.3"
 echo "  1、安  装"
 echo "  2、卸  载"
 echo "  3、更  新"
